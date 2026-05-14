@@ -83,42 +83,54 @@ const heroHighlights = [
 
 const demoNotes = [
   {
-    title: 'Clear service presentation',
+    title: 'Clear services and next steps',
     detail:
-      'This page already shows the core offer clearly through the hero, services section, pricing cues, and straightforward booking language.',
+      'The page shows the offer clearly with service details, pricing cues, and direct booking prompts.',
   },
   {
-    title: 'Trust-building local details',
+    title: 'Trust-building local presence',
     detail:
-      'Hours, contact details, location information, about copy, and a consistent visual style help the business feel real and dependable.',
+      'Hours, contact details, about copy, and gallery content help the business feel established and real.',
   },
   {
-    title: 'Easy paths to contact',
+    title: 'Easy contact flow',
     detail:
-      'Calls to action, click-to-call links, and a simple request form make it easier for a customer to move from browsing to reaching out.',
+      'Calls to action, click-to-call links, and the request form make it simple for a customer to reach out.',
   },
 ]
 
-const improvementIdeas = [
+const serviceOffers = [
   {
-    title: 'Live booking integration',
-    detail:
-      'Connect the form and CTAs to a real scheduling tool so appointment requests, confirmations, and reminders happen automatically.',
+    title: 'Website design/build',
+    detail: 'A custom site designed around the business, services, and local audience.',
   },
   {
-    title: 'Local SEO setup',
-    detail:
-      'Expand the page with search-focused copy, structured data, stronger metadata, and service-area targeting to improve discoverability.',
+    title: 'Contact/quote forms',
+    detail: 'Simple lead forms for bookings, quote requests, or general inquiries.',
   },
   {
-    title: 'Stronger social proof',
-    detail:
-      'Add real photography, testimonials, review highlights, and team details so the site reflects the actual business more directly.',
+    title: 'Local SEO basics',
+    detail: 'Page structure, copy, and metadata set up to support local search visibility.',
   },
   {
-    title: 'Conversion tracking and refinement',
-    detail:
-      'Track calls, form submissions, and button clicks, then refine layout and messaging based on how customers actually use the site.',
+    title: 'Google Business Profile cleanup',
+    detail: 'A cleaner, more complete profile that matches the website and business details.',
+  },
+  {
+    title: 'Maps/call/directions setup',
+    detail: 'Clear ways for customers to call, find the business, and get there fast.',
+  },
+  {
+    title: 'Gallery/testimonials',
+    detail: 'Real photos and customer feedback that help build confidence quickly.',
+  },
+  {
+    title: 'Booking or ordering links',
+    detail: 'Direct links into the tools a business already uses to take appointments or orders.',
+  },
+  {
+    title: 'Monthly care plan',
+    detail: 'Ongoing updates, edits, and basic upkeep after the site goes live.',
   },
 ]
 
@@ -586,10 +598,9 @@ function App() {
                 What this demo shows
               </h2>
               <p className="mt-5 text-lg leading-8 text-[var(--ink-700)]">
-                This page is meant to show the practical foundation of a strong
-                local business website: clear services, credible business
-                information, and simple ways for a customer to make contact or
-                request a booking.
+                This page shows the foundation of a solid local business
+                website: clear services, trust signals, and easy ways for a
+                customer to get in touch.
               </p>
             </div>
 
@@ -618,20 +629,19 @@ function App() {
             <div className="mt-10 rounded-[1.4rem] border border-black/8 bg-[var(--paper-deep)] px-5 py-6 sm:px-6">
               <div className="max-w-3xl">
                 <p className="text-sm font-bold uppercase tracking-[0.24em] text-[var(--rust-700)]">
-                  Possible Next Steps
+                  Services I Offer
                 </p>
                 <h3 className="mt-3 font-['Libre_Baskerville'] text-3xl text-[var(--ink-950)]">
-                  If a client wanted to take this further
+                  What could be added or handled for a client
                 </h3>
                 <p className="mt-4 text-base leading-7 text-[var(--ink-700)]">
-                  A real client build could keep this structure and extend it
-                  into a more complete production site with deeper functionality,
-                  stronger proof points, and better long-term visibility.
+                  If someone wanted to move from a demo like this into a real
+                  client project, these are the main service areas I can help with.
                 </p>
               </div>
 
               <div className="mt-6 grid gap-4 md:grid-cols-2">
-                {improvementIdeas.map((idea) => (
+                {serviceOffers.map((idea) => (
                   <div
                     key={idea.title}
                     className="rounded-[1.1rem] border border-black/8 bg-white px-5 py-5"
