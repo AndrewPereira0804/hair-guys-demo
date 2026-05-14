@@ -83,19 +83,42 @@ const heroHighlights = [
 
 const demoNotes = [
   {
-    title: 'Services are easy to find',
+    title: 'Clear service presentation',
     detail:
-      'Customers can quickly understand what the business offers, what feels relevant to them, and what kind of visit to request.',
+      'This page already shows the core offer clearly through the hero, services section, pricing cues, and straightforward booking language.',
   },
   {
-    title: 'Trust builds faster',
+    title: 'Trust-building local details',
     detail:
-      'Clear business information, consistent copy, and a polished presentation help a local company feel established and dependable.',
+      'Hours, contact details, location information, about copy, and a consistent visual style help the business feel real and dependable.',
   },
   {
-    title: 'Contacting the business takes less effort',
+    title: 'Easy paths to contact',
     detail:
-      'Strong calls to action, visible phone details, and a simple request form make it easier for people to reach out and book.',
+      'Calls to action, click-to-call links, and a simple request form make it easier for a customer to move from browsing to reaching out.',
+  },
+]
+
+const improvementIdeas = [
+  {
+    title: 'Live booking integration',
+    detail:
+      'Connect the form and CTAs to a real scheduling tool so appointment requests, confirmations, and reminders happen automatically.',
+  },
+  {
+    title: 'Local SEO setup',
+    detail:
+      'Expand the page with search-focused copy, structured data, stronger metadata, and service-area targeting to improve discoverability.',
+  },
+  {
+    title: 'Stronger social proof',
+    detail:
+      'Add real photography, testimonials, review highlights, and team details so the site reflects the actual business more directly.',
+  },
+  {
+    title: 'Conversion tracking and refinement',
+    detail:
+      'Track calls, form submissions, and button clicks, then refine layout and messaging based on how customers actually use the site.',
   },
 ]
 
@@ -203,6 +226,12 @@ function App() {
                   className="inline-flex items-center justify-center rounded-md border border-[var(--ink-900)]/15 bg-white px-6 py-4 text-base font-bold text-[var(--ink-900)] transition hover:border-[var(--rust-600)] hover:text-[var(--rust-700)]"
                 >
                   Call to book
+                </a>
+                <a
+                  href="#for-owners"
+                  className="inline-flex items-center justify-center rounded-md border border-[var(--ink-900)]/15 bg-[var(--paper-deep)] px-6 py-4 text-base font-bold text-[var(--ink-900)] transition hover:border-[var(--rust-600)] hover:text-[var(--rust-700)]"
+                >
+                  For Owners
                 </a>
               </div>
             </div>
@@ -549,7 +578,7 @@ function App() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8 lg:pb-18">
+        <section id="for-owners" className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8 lg:pb-18">
           <div className="paper-card bg-[rgba(255,253,249,0.92)]">
             <div className="max-w-3xl">
               <p className="section-kicker">For Business Owners</p>
@@ -557,14 +586,20 @@ function App() {
                 What this demo shows
               </h2>
               <p className="mt-5 text-lg leading-8 text-[var(--ink-700)]">
-                A one-page site like this can do a few important jobs well for a
-                local business: explain the services clearly, help new customers
-                feel comfortable, and make it easy to call or request an
-                appointment without friction.
+                This page is meant to show the practical foundation of a strong
+                local business website: clear services, credible business
+                information, and simple ways for a customer to make contact or
+                request a booking.
               </p>
             </div>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <div className="mt-8">
+              <p className="text-sm font-bold uppercase tracking-[0.24em] text-[var(--rust-700)]">
+                Included In This Demo
+              </p>
+            </div>
+
+            <div className="mt-4 grid gap-4 md:grid-cols-3">
               {demoNotes.map((note) => (
                 <div
                   key={note.title}
@@ -578,6 +613,38 @@ function App() {
                   </p>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-10 rounded-[1.4rem] border border-black/8 bg-[var(--paper-deep)] px-5 py-6 sm:px-6">
+              <div className="max-w-3xl">
+                <p className="text-sm font-bold uppercase tracking-[0.24em] text-[var(--rust-700)]">
+                  Possible Next Steps
+                </p>
+                <h3 className="mt-3 font-['Libre_Baskerville'] text-3xl text-[var(--ink-950)]">
+                  If a client wanted to take this further
+                </h3>
+                <p className="mt-4 text-base leading-7 text-[var(--ink-700)]">
+                  A real client build could keep this structure and extend it
+                  into a more complete production site with deeper functionality,
+                  stronger proof points, and better long-term visibility.
+                </p>
+              </div>
+
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
+                {improvementIdeas.map((idea) => (
+                  <div
+                    key={idea.title}
+                    className="rounded-[1.1rem] border border-black/8 bg-white px-5 py-5"
+                  >
+                    <h4 className="font-['Libre_Baskerville'] text-2xl leading-tight text-[var(--ink-950)]">
+                      {idea.title}
+                    </h4>
+                    <p className="mt-3 text-sm leading-7 text-[var(--ink-700)]">
+                      {idea.detail}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
