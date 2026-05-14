@@ -81,6 +81,24 @@ const heroHighlights = [
   },
 ]
 
+const demoNotes = [
+  {
+    title: 'Services are easy to find',
+    detail:
+      'Customers can quickly understand what the business offers, what feels relevant to them, and what kind of visit to request.',
+  },
+  {
+    title: 'Trust builds faster',
+    detail:
+      'Clear business information, consistent copy, and a polished presentation help a local company feel established and dependable.',
+  },
+  {
+    title: 'Contacting the business takes less effort',
+    detail:
+      'Strong calls to action, visible phone details, and a simple request form make it easier for people to reach out and book.',
+  },
+]
+
 function App() {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
@@ -527,6 +545,39 @@ function App() {
                   ) : null}
                 </form>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8 lg:pb-18">
+          <div className="paper-card bg-[rgba(255,253,249,0.92)]">
+            <div className="max-w-3xl">
+              <p className="section-kicker">For Business Owners</p>
+              <h2 className="mt-4 font-['Libre_Baskerville'] text-4xl text-[var(--ink-950)] sm:text-5xl">
+                What this demo shows
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-[var(--ink-700)]">
+                A one-page site like this can do a few important jobs well for a
+                local business: explain the services clearly, help new customers
+                feel comfortable, and make it easy to call or request an
+                appointment without friction.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {demoNotes.map((note) => (
+                <div
+                  key={note.title}
+                  className="rounded-[1.1rem] border border-black/8 bg-white px-5 py-5"
+                >
+                  <h3 className="font-['Libre_Baskerville'] text-2xl leading-tight text-[var(--ink-950)]">
+                    {note.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-[var(--ink-700)]">
+                    {note.detail}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
